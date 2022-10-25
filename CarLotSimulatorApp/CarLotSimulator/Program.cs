@@ -6,7 +6,7 @@ namespace CarLotSimulator
     {
         static void Main(string[] args)
         {
-            //TODO
+            //DONE
 
             //Create a seperate class file called Car
             //Car shall have the following properties: Year, Make, Model, EngineNoise, HonkNoise, IsDriveable
@@ -54,16 +54,21 @@ namespace CarLotSimulator
                 IsDriveable = true,
             };
 
+
             lot.Cars.Add(Honda);
 
             Car Ford = new Car(2022, "Ford", "Explorer", "Minimal", "Medium", true);
 
             lot.Cars.Add(Ford);
 
-            foreach(var car in lot.Cars)
-            {
+            Console.WriteLine($"Number of cars created: {CarLot.numberOfCars}");
+
+            foreach (var car in lot.Cars)
+            {                
                 Console.WriteLine($"Year: {car.Year} Make: {car.Make} Model: {car.Model}");
             }
+
+
         }
     }
 }
